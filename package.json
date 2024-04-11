@@ -1,6 +1,6 @@
 {
   "name": "eth-gas-alert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "intent to notify when Ethereum gas price goes down to the target price",
   "main": "eth-gas.js",
   "scripts": {
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/hesamdarbandi/eth-gas-alert/issues"
   },
-  "homepage": "https://github.com/hesamdarbandi/eth-gas-alert#readme"
+  "homepage": "https://github.com/hesamdarbandi/eth-gas-alert#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "eth-gas-checker": "^1.0.0"
+  }
 }

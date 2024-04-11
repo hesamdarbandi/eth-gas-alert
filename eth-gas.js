@@ -1,6 +1,6 @@
 
 const axios = require('axios')
-
+const { getGasPrice } = require("eth-gas-checker");
 
 class GasAlert {
 
@@ -18,6 +18,7 @@ class GasAlert {
     }
 
     async getGasPrice() {
+        const gasPrice = await getGasPrice();
         const res = await axios.get(this.url)
         if (!res || !res.data || !res.data.code == 200 || !res.data.data) {
           throw new Error('Something went wrong when requesting gas price data.')
